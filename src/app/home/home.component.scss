@@ -1,0 +1,154 @@
+p {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+}
+
+input,
+textarea {
+  width: 25vw;
+  padding: 2vmin;
+  border: 2px solid #eee;
+  border-radius: 0.25rem;
+  outline: none;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.06);
+}
+
+input::placeholder {
+  color: #d1d3d4;
+}
+
+button {
+  margin-top: 1%;
+  padding: 2vmin;
+  width: 20vw;
+  appearance: none;
+  border-radius: 5px;
+  border: none;
+  background-color: #2330d8;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  outline: none;
+}
+button:disabled,
+button[disabled] {
+  background-color: grey;
+}
+
+.home {
+  background-image: url("../../assets/web/Group\ 31.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.logo {
+  display: flex;
+  padding: 1.5% 2%;
+}
+
+.content {
+  margin-top: 25vh;
+}
+.taglines {
+  padding: 1.5% 2%;
+  p {
+    line-height: 150%;
+  }
+
+  .tagline {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+
+  .tagline-2 {
+    font-weight: 300;
+    font-size: 1.75rem;
+  }
+}
+
+.subscribe {
+  padding: 1.5% 2%;
+  display: flex;
+  flex-direction: column;
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  p {
+    margin-top: 3%;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+}
+
+
+
+@media (min-width: 1800px) {
+  .home {
+    background-image: url("../../assets/web/Group\ 31@2x.png");
+  }
+}
+
+@media (orientation: portrait), (max-width: 1200) {
+  .home {
+    background-image: url("../../assets/mobile/Group\ 63@2x.png"),
+      url("../../assets/mobile/Path\ 182.svg");
+    // background-repeat: no-repeat, repeat;
+    background-size: 85%, cover;
+    background-position: center bottom 5%, 0%;
+  }
+  .logo {
+    padding-top: 2%;
+    justify-content: center;
+  }
+
+  .content {
+    margin-top: 10vh;
+  }
+  .taglines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      text-align: center;
+    }
+    .tagline {
+      font-size: 2.75rem;
+    }
+    .tagline-2 {
+      font-size: 2rem;
+      width: 90%;
+    }
+  }
+  .subscribe {
+    margin-top: 6%;
+    align-items: center;
+    padding: 0 3%;
+    input,
+    textarea {
+      width: 35vh;
+      margin: 2%;
+    }
+    button {
+      width: 35vh;
+      margin: 2%;
+    }
+    p {
+      width: 35vh;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .home {
+    background-image: url("../../assets/mobile/Group\ 63.png"),
+      url("../../assets/mobile/Path\ 182.svg");
+    background-size: 85%, cover;
+    background-position: center bottom 5%, 0%;
+  }
+}
