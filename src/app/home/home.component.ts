@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomeComponent implements OnInit {
   emailForm: FormGroup;
   isFormValid: boolean;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private api: ApiService) {}
 
   ngOnInit(): void {
     this.isSubscribed = false;
@@ -24,15 +25,10 @@ export class HomeComponent implements OnInit {
   onSubmit() {
     console.log(this.emailForm);
     let postData = this.emailForm.value;
-    this.http
-      .post(
-        'https://sportfolio-44e93-default-rtdb.firebaseio.com/posts.json',
-        postData
-      )
-      .subscribe((responseData) => {
-        console.log(responseData);
-        this.isSubscribed = true;
-      });
+    this.api.sendData(postData).subscribe((responseData) => {
+      console.log(responseData);
+      this.isSubscribed = true;
+    });
     this.emailForm.reset();
   }
   isValid() {

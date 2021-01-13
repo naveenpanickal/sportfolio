@@ -1,7 +1,8 @@
 <div class="home">
   <div class="logo">
     <source srcset="../../assets/logos/Group 33@2x.png" media="(min-width: 1800px)">
-    <img src="../../assets/logos/Group 33.png" srcset="../../assets/logos/Group 33.png 181w, ../../Group 33@2x.png 361w" alt="sportfolio logo">
+    <img src="../../assets/logos/Group 33.png" srcset="../../assets/logos/Group 33.png 181w, ../../Group 33@2x.png 361w"
+      alt="sportfolio logo">
   </div>
   <div class="content">
     <div class="taglines">
@@ -9,9 +10,9 @@
       <p class="tagline-2">at the forefront of your career path.</p>
     </div>
     <div class="subscribe">
-      <form [formGroup]= "emailForm" (ngSubmit)="onSubmit()">
-        <input placeholder="Your Email" type="email" name="email" formControlName ="email">
-      <button [disabled] = "!isValid()"  type="submit">Notify me of updates</button>
+      <form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+        <input placeholder="Your Email" type="email" name="email" formControlName="email">
+        <button [disabled]="!isValid()" type="submit">Notify me of updates</button>
       </form>
       <p *ngIf="isSubscribed">You've been subscribed !! Look forward to awesome products and updates.</p>
     </div>
