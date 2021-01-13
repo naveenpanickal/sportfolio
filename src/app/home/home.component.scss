@@ -105,6 +105,7 @@ button[disabled] {
 
   .content {
     margin-top: 10vh;
+    padding-bottom: 2%;
   }
   .taglines {
     display: flex;
@@ -114,10 +115,10 @@ button[disabled] {
       text-align: center;
     }
     .tagline {
-      font-size: 2.75rem;
+      font-size: 2.5rem;
     }
     .tagline-2 {
-      font-size: 2rem;
+      font-size: 1.75rem;
       width: 90%;
     }
   }
@@ -141,7 +142,22 @@ button[disabled] {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
+  button {
+    width: 30vh;
+  }
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+  .content {
+    margin-top: 7vh;
+  }
+  button {
+    width: 50vh;
+  }
+}
+
+@media (max-width: 800px) and (orientation: portrait) {
   .home {
     background-image: url("../../assets/mobile/Group\ 63.png"),
       url("../../assets/mobile/Path\ 182.svg");

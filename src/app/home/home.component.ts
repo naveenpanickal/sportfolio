@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit {
     this.api.sendData(postData).subscribe((responseData) => {
       console.log(responseData);
       this.isSubscribed = true;
+      console.log(this.isSubscribed);
     });
     this.emailForm.reset();
   }
