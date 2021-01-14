@@ -12,9 +12,10 @@
     <div class="subscribe">
       <form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
         <input placeholder="Your Email" type="email" name="email" formControlName="email">
-        <button [disabled]="!isValid()" type="submit">Notify me of updates</button>
+        <button [disabled]="emailForm.dirty && emailForm.invalid" type="submit">Notify me of updates</button>
       </form>
       <p *ngIf="isSubscribed">You've been subscribed !! Look forward to awesome products and updates.</p>
     </div>
   </div>
 </div>
+

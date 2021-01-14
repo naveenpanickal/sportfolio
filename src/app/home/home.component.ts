@@ -11,7 +11,6 @@ import { ApiService } from '../api.service';
 export class HomeComponent implements OnInit {
   isSubscribed: boolean;
   emailForm: FormGroup;
-  isFormValid: boolean;
 
   constructor(private http: HttpClient, private api: ApiService) {}
 
@@ -31,12 +30,5 @@ export class HomeComponent implements OnInit {
       console.log(this.isSubscribed);
     });
     this.emailForm.reset();
-  }
-  isValid() {
-    if (this.emailForm.status == 'VALID' || this.emailForm.touched == false) {
-      return true;
-    } else {
-      return false;
-    }
   }
 }
